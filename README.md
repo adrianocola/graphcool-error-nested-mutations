@@ -2,7 +2,7 @@
 
 This repository reports a graphcool error that occurs when using permissions and nested mutations. 
 
-In some circunstances, nested inserts permissions are not validated, so a node can be created bypassing permissions settings. This happens when using queries and listing relations as permission's fields.
+In some circunstances, nested inserts permissions are not validated, so a node can be created bypassing permissions settings. This happens when using permissions queries and listing relations as permission's fields.
 
 ### Types
 
