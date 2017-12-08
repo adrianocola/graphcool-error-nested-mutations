@@ -4,6 +4,8 @@ This repository reports a graphcool error that occurs when using permissions and
 
 In some circunstances, nested inserts permissions are not validated, so a node can be created bypassing permissions settings. This happens when using permissions queries and listing relations as permission's fields.
 
+Github issue: https://github.com/graphcool/framework/issues/1378
+
 ### Types
 
 `Folder` and `File` types. A `Folder` may contain files. A `Folder` may be secret (`secret` field).
