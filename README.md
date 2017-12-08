@@ -47,6 +47,7 @@ permissions:
 Create a `Folder` when creating a new `File` (using a nested creation):
 
 ```graphql
+# run as EVERYONE
 mutation{
   createFile(
     name: "File 1"
@@ -72,6 +73,7 @@ Response:
 Cannot create a secret folder (permissions don't allow setting the field `secret` when creating a new `Folder`)
 
 ```graphql
+# run as EVERYONE
 mutation{
   createFile(
     name: "File 1"
@@ -123,6 +125,7 @@ permissions:
 This doesn't work anymore:
 
 ```graphql
+# run as EVERYONE
 mutation{
   createFile(
     name: "File 1"
@@ -162,6 +165,7 @@ To make it work I must add the relation `folder` as one of the File's file permi
 If I run the same query again, the nodes are created: 
 
 ```graphql
+# run as EVERYONE
 mutation{
   createFile(
     name: "File 1"
@@ -211,6 +215,7 @@ permissions:
 Trying to create a `File`, creating also a secret `Folder` (OBS: the permissions don't allow the creation of a secret folder)
 
 ```graphql
+# run as EVERYONE
 mutation{
   createFile(
     name: "File 1"
