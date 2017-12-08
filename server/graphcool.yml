@@ -1,0 +1,18 @@
+types: ./types.graphql
+
+permissions:
+  # Folder permissions
+  - operation: Folder.create
+    query: './src/query.graphql'
+    fields:
+    - name
+  - operation: Folder.read
+
+  # File permissions
+  - operation: File.create
+    query: './src/query.graphql'
+    fields:
+    - name
+    - folder
+  - operation: File.read
+  - operation: FolderOnFile.*

@@ -1,0 +1,4 @@
+# Simple permission query
+query{
+  SomeFolderExists
+}

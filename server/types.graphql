@@ -1,0 +1,22 @@
+type User @model {
+  id: ID! @isUnique
+  name: String
+  dateOfBirth: DateTime
+}
+
+type Folder @model {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  files: [File!]! @relation(name: "FolderOnFile")
+  secret: Boolean! @defaultValue(value: false)
+  updatedAt: DateTime!
+}
+
+type File @model {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  folder: Folder! @relation(name: "FolderOnFile")
+  updatedAt: DateTime!
+}
